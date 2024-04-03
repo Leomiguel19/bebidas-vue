@@ -50,12 +50,13 @@
                 <div class="spacey-y-4">
                     <label 
                         class="block text-white uppercase font-extrabold text-lg"
-                        for="ingrediente">Categoría</label>
+                        for="ingrediente">Ingrediente</label>
                     <input
                         id="ingrediente"
                         type="text"                    
                         class="p-3 w-full rounded-lg focus:outline-none"
                         placeholder="Nombre o Ingrediente: ej. Vodka, Tequila, etc"
+                        v-model="store.busqueda.nombre"
                     />
                 </div>
                 <div class="spacey-y-4">
@@ -68,6 +69,7 @@
                     <select 
                         id="categoria"
                         class="p-3 w-full rounded-lg focus:outline-none"
+                        v-model="store.busqueda.categoria"
                     >
                         <option value="">-- Seleccione --</option>
                         <option 
