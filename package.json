@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.19",
     "autoprefixer": "^10.4.19",
     "axios": "^1.6.8",
     "pinia": "^2.1.7",
