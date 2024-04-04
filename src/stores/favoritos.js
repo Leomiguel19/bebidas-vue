@@ -1,13 +1,18 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
+import { useBebidasStore } from './bebidas'
 
 export const useFavoritosStore = defineStore('favoritos', () => {
     
+    const bebidas = useBebidasStore()
+    const favoritos = ref([])
+
     const handleClickFavoritos = () => {
-        console.log('agregar a favoritos')
+        favoritos.value.push(bebidas.receta)
     }
 
     return {
-        handleClickFavoritos
+        handleClickFavoritos,
+        favoritos
     }
 })
