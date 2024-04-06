@@ -39,6 +39,10 @@ export const useFavoritosStore = defineStore('favoritos', () => {
 
         notificaciones.texto = 'Se agrego a favoritos'
         notificaciones.mostrar = true
+
+        setTimeout(() => {
+            notificaciones.$reset()
+        }, 3000);
     }
 
     function handleClickFavoritos(e){
